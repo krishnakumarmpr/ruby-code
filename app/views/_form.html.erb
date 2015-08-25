@@ -1,0 +1,20 @@
+<%= form_for (@layorreport) do |f| %> 
+<% if @layorreport.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@layorreport.errors.count, "error") %> prohibited
+        this layorreport from being saved: 
+      </h2>
+      <ul>
+        <% @layorreport.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+    <b><%= f.label :City%></b>
+    <%= f.text_field :city %>
+
+ </div>

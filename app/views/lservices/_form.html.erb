@@ -1,0 +1,61 @@
+<%= form_for(@lservice) do |f| %>
+  <% if @lservice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lservice.errors.count, "error") %> prohibited this lservice from being saved:</h2>
+
+      <ul>
+      <% @lservice.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <button onclick="alert('Click event triggered')">This is</button>
+
+
+  <style>
+     body
+  {background-color: #BC8F8F;
+   }
+  label
+  {color: #8B0000;
+    box-shadow: 10px 10px 5px #483D8B;}
+  h1
+  {text-shadow: 5px 5px 5px #6495ed;
+    color: red;}
+    #content
+{
+    position: absolute;
+    top: 110px;
+    left: 350px;
+    width: 775px;
+    height: 605px;
+
+}
+</style>
+
+  <div class="field">
+    <%= f.label :servicecode %><br />
+    <%= f.text_field :servicecode %>
+  </div>
+  <div class="field">
+    <%= f.label :servicename %><br />
+    <%= f.text_field :servicename %>
+  </div>
+  <div class="field">
+    <%= f.label :charge %><br />
+    <%= f.text_field :charge %>
+  </div>
+<div class="field">
+<%=f.label :layorcode%>
+<%=f.collection_select(:lreport_id,Lreport.all , 'id','layorcode')%>
+</div>
+<div class="field">
+<%=f.label :city%>
+<%=f.collection_select(:lreport_id,Lreport.all , 'id','city')%>
+</div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+    </div>
+<% end %>

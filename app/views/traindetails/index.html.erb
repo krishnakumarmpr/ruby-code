@@ -1,0 +1,30 @@
+<style>
+h1 {color:red;}
+</style>
+<h1>SOUTHREN RAILWAY TRANSPORT CORPORATION</h1>
+<table>
+  <tr>
+    <th>TrainNumber</th>
+    <th>Trainname</th>
+</tr>
+<% @traindetails.each do |traindetails| %>
+  <tr>
+    <td><%= traindetails.number  %></td>
+    <td><%= traindetails.name  %></td>
+    <td><%= link_to 'Show',  traindetail_path(traindetails) %></td>
+    <td><%= link_to 'Edit',  edit_traindetails_path(traindetails) %></td>
+    <td><%= link_to 'Destroy', traindetail_path(traindetails), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<%end%>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<b><center>
+<h2><%= link_to 'TRAINDEATILS', new_traindetail_path %></h2></center></b>
+

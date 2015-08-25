@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>PassengerName:</b>
+  <%= @reservation.pname %>
+</p>
+<p>
+  <b>PassengerAddress:</b>
+  <%= @reservation.paddress %>
+</p>
+<p>
+  <b>Age:</b>
+  <%= @reservation.age %>
+</p>
+
+<p>
+  <b>Gender</b>
+  <%= @reservation.gender %>
+</p>
+<p>
+  <b>DateOfJourney:</b>
+  <%= @reservation.doj %>
+</p>
+<p>
+  <b>Trainname:</b>
+  <%= @reservation.tname %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @reservation.source %>
+</p>
+
+<p>
+  <b>Destination:</b>
+  <%= @reservation.destination %>
+</p>
+<p>
+  <b>Availableseats:</b>
+  <%= @reservation.availseats %>
+</p>
+<p>
+  <b>Status:</b>
+  <%= @reservation.status %>
+</p>
+<p>
+  <b>NumberOfSeats:</b>
+  <%= @reservation.noofpass %>
+</p>
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservation_path %>

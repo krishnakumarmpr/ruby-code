@@ -1,0 +1,22 @@
+<%= form_for(@lservice) do |f| %>
+  <% if @lservice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lservice.errors.count, "error") %> prohibited this lservice from being saved:</h2>
+
+      <ul>
+      <% @lservice.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :servicename %><br />
+    <%= f.text_field :servicename %>
+  </div>
+<div class="field">
+<%=f.label :city%>
+<%=f.collection_select(:lreport_id,Lreport.all , 'id','city')%>
+</div>
+<%= button_to "Show", @lservice, remote: true %>
+<%end%>

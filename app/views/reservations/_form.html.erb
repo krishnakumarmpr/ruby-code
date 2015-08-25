@@ -1,0 +1,39 @@
+<%= form_for(@reservation) do |f| %> 
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pname %><br />
+    <%= f.text_field :pname %>
+  </div>
+  <div class="field">
+    <%= f.label :paddress %><br />
+    <%= f.text_field :paddress %>
+  </div>
+<div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+     <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.collection_select(:gender, Gender.all, :id,:gender_type) %>
+     </div>
+
+      <div class="field">
+    <%= f.label :class %><br />
+    <%= select 'share','status',[["First"],["Secound"],["Third"]]%>
+     </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>

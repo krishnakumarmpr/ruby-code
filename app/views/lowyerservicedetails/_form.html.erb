@@ -1,0 +1,37 @@
+<%= form_for(@lowyerservicedetail) do |f| %>
+  <% if @lowyerservicedetail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lowyerservicedetail.errors.count, "error") %> prohibited this lowyerservicedetail from being saved:</h2>
+
+      <ul>
+      <% @lowyerservicedetail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lowyer_code %><br />
+    <%= f.text_field :lowyer_code %>
+  </div>
+  <div class="field">
+    <%= f.label :service_code %><br />
+    <%= f.text_field :service_code %>
+  </div>
+  <div class="field">
+    <%= f.label :service_name %><br />
+    <%= f.text_field :service_name %>
+  </div>
+  <div class="field">
+    <%= f.label :charges %><br />
+    <%= f.text_field :charges %>
+  </div>
+  <div class="field">
+    <%= f.label :lowyerdetail_id %><br />
+    <%= f.number_field :lowyerdetail_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

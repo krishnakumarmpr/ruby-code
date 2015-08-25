@@ -1,0 +1,47 @@
+<center><h1>Listing lservices</h1>
+<style>
+table, td, th {
+   background-color:      #E9967A;
+    border: 1px solid green ;
+      padding: 15px;
+      box-shadow: 10px 10px 5px #8B0000;
+}
+th {
+    background-color: green;
+    color: white;
+}
+body
+{background-color:    #FFB6C1; 
+    border: 5px orange;
+    }
+</style>
+<table>
+  <tr>
+    <th>Layorcode</th>  
+    <th>Servicecode</th>
+    <th>Servicename</th>
+    <th>Charge</th>
+    <th>City</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lservices.each do |lservice| %>
+  <tr>
+    <td><%=lservice.lreport.layorcode if  lservice.lreport_id %></td>
+    <td><%= lservice.servicecode %></td>
+    <td><%= lservice.servicename %></td>
+    <td><%= lservice.charge %></td>
+    <td><%=lservice.lreport.city if lservice.lreport_id%></td>   
+    <td><%= link_to 'Show', lservice %></td>
+    <td><%= link_to 'Edit', edit_lservice_path(lservice) %></td>
+    <td><%= link_to 'Destroy', lservice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'new', new_lservice_path %>
+</center>

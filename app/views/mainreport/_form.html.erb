@@ -1,0 +1,23 @@
+<%= form_for (@mainreport) do |f| %> 
+<% if @mainreport.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@mainreport.errors.count, "error") %> prohibited
+        this layorservice from being saved: 
+      </h2>
+      <ul>
+        <% @mainreport.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+    <b><%= f.label :servicename %></b>
+    <%=  f.collection_select(:layorservice_id,Layoservice.all ,:id,:servicename) %>
+ </div>
+<div class="field">
+    <b><%= f.label :City %></b>
+    <%=  f.collection_select(:layorreport_id,Layorreport.all ,:id,:city)%>
+ </div>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Layorcode:</b>
+  <%= @lreport.layorcode %>
+</p>
+
+<p>
+  <b>Layorname:</b>
+  <%= @lreport.layorname %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @lreport.city %>
+</p>
+
+<p>
+  <b>Exp:</b>
+  <%= @lreport.exp %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @lreport.rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_lreport_path(@lreport) %> |
+<%= link_to 'Back', lreports_path %>

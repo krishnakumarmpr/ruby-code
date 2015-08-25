@@ -1,0 +1,23 @@
+<%= form_for (@layorservice) do |f| %> 
+<% if @layorservice.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@layorservice.errors.count, "error") %> prohibited
+        this layorservice from being saved: 
+      </h2>
+      <ul>
+        <% @layorservice.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+    <b><%= f.label :service %></b>
+    <%= f.text_field :service %>
+ </div>
+<div class="field">
+    <b><%= f.label :City %></b>
+    <%= f.text_field :city if Layorreport.layorservice %>
+ </div>

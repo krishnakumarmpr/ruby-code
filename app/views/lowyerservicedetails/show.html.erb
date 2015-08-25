@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lowyer code:</b>
+  <%= @lowyerservicedetail.lowyer_code %>
+</p>
+
+<p>
+  <b>Service code:</b>
+  <%= @lowyerservicedetail.service_code %>
+</p>
+
+<p>
+  <b>Service name:</b>
+  <%= @lowyerservicedetail.service_name %>
+</p>
+
+<p>
+  <b>Charges:</b>
+  <%= @lowyerservicedetail.charges %>
+</p>
+
+<p>
+  <b>Lowyerdetail:</b>
+  <%= @lowyerservicedetail.lowyerdetail_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_lowyerservicedetail_path(@lowyerservicedetail) %> |
+<%= link_to 'Back', lowyerservicedetails_path %>

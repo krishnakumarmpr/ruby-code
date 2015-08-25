@@ -1,0 +1,97 @@
+<p id="notice"><%= notice %></p>
+<style>
+body
+{
+	background-color:  	#8B0000;
+
+}
+table,td,th
+{
+	
+	
+	background-color:  	 	#87CEEB;
+	 padding: 10px;
+}
+link{
+	color:  green;
+}
+h1
+{color:  	#2E8B57;
+}
+
+</style>
+<script>
+$(document).ready(function(){
+  $("#p1").click(function(){
+    $("#p2").hide("5");
+    alert("Thank you!visiting!");
+
+  });
+});
+</script>
+<center>
+<h1><b><font size="8" color="red"><%=@demo.name%></font></b></h1><br></center>
+<b id="p1"><font size="6"color="#C71585"><%= link_to 'Home', demos_path %> 
+	<%= link_to 'Edit', edit_demo_path%></font></b>
+    <body id="p2">
+<br><br><center><table>
+
+<tr>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>DOB</th>
+    <th>Address</th>
+    <th>EMAIL</th>
+    <th>MobileNo</th>
+    <th>IDENTITYPROOF</th>
+    <th>IDNUMBER</th>
+    
+          </tr>
+<!-- < % @demo.each do |t| %> -->
+<tr>
+    <td><%=@demo.name%></td>
+<td><%=@demo.gender.gender_type if  @demo.gender_id%></td>
+<td><%=@demo.dob%></td>
+<td><%=@demo.address%></td>
+<td> <%=@demo.email%></td>
+<td> <%=@demo.mob%></td>
+<td><%=@demo.prf%></td>
+<td><%=@demo.idno%></td>
+</tr>
+</table>
+
+<h1><b>PASSENGER INFORMATION </b></h1>
+<table>
+	<tr><th>TICKETNO</th>
+		<th>TRAIN.NO</th>
+		<th>TRAIN.NAME</th>	
+    <th>SOURCE</th>
+    <th>DESTINATION</th>
+    <th>CLASS</th>
+    <th>COMPARTMENTNO</th>
+    <th>SEATNO</th>
+       <th>DOJ</th>
+    <th>AMOUNT</th>
+    <th>MODEOFPAYMENT</th>
+    <th>CHECKEDBY</th>
+
+    </tr>
+    <tr><td><%=@demo.tickno%></td>
+    	<td><%=@demo.tno%></td>
+    	<td><%=@demo.tname%></td>
+     <td><%=@demo.src%></td>
+	<td><%=@demo.dest%></td>
+	<td><%=@demo.status%></td>
+	<td><%=@demo.cno%></td>
+	<td><%=@demo.sno%></td>
+	<td> <%=@demo.doj%></td>
+	<td><%=@demo.amt%></td>
+	<td><%=@demo.mpay%></td>
+	<td><%=@demo.check%></td>
+</tr>
+</table>
+<!-- < %end%> -->
+</body>
+<img src="http://know.burrp.com/wp-content/uploads/2012/05/chennai_central.jpg"></img></center><br><br><br>
+
+<b><font size="24" color="#1E90FF"><marquee>WISH YOU HAPPY JOURNEY </marquee></font></b>

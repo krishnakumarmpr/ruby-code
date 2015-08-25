@@ -1,0 +1,79 @@
+<style>
+h1
+{ color: ;
+	text-shadow: 5px 5px 5px #FF0000;
+  font-size:24;
+}
+table, td, th {
+   background-color:      #E9967A;
+    border: 1px solid green ;
+      padding: 15px;
+      box-shadow: 10px 10px 5px #8B0000;
+}
+th {
+    background-color: green;
+    color: white;
+}
+img
+{border: 5px solid ;
+
+  }
+body
+{background-color:    #FFB6C1; 
+    border: 5px orange;
+	}
+body{color: black:;}
+    
+</style>
+
+
+<b><center><h1>PASSENGER INFORMATION</h1></b><br>
+ <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRsO_4RkqbmJ7mQCE6cYV84CLkGf-1ztglc52li00b8-SF5Glj6BWZFD-FP"> </center>
+<b><h2><%=link_to 'RegisterHere',  new_demo_path %></h2></b>
+<br>
+<center><body>
+ <table BORDER="30" CELLPADDING="10" CELLSPACING="3" BORDERCOLOR="00FF00">
+ <tr>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>DOB</th>
+    <th>Address</th>
+    <th>EMAIL</th>
+    <th>MobileNo</th>
+    <th>DOJ</th>
+    <th>SOURCE</th>
+    <th>DESTINATION</th>
+    <th>CLASS</th>
+    <th>TICKETNUMBER</th>
+     <th>AMOUNT</th>
+    <th>CHECKEDBY</th>
+          </tr>
+<% @demo.each do |demo| %>
+<tr>
+<td><%= demo.name %></td>
+<td><%= demo.gender.gender_type if  demo.gender_id%></td>
+<td><%= demo.dob%></td>
+<td><%= demo.address%></td>
+<td><%=demo.email%></td>
+<td><%=demo.mob%></td>
+<td><%=demo.doj%></td>
+<td><%=demo.src %></td>
+<td><%=demo.dest %></td>
+<td><%=demo.status%></td>
+<td><%=demo.tickno%></td>
+<td><%=demo.amt%></td>
+  <td><%=demo.check%></td>
+<td><%= link_to 'show', demo_path(demo)%></td>
+<td><%= link_to 'edit', edit_demo_path(demo)%></td>
+ <td><%= link_to 'Destroy', demo_path(demo),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+<%end%>
+
+
+</table><br>
+<b><font size="16" color="#8B0000"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS0hbQco_5gZVj1IOn6bSlLYx8M4YKKg50ZQ8qUtEdBulu7966Z"><marquee>SOUTHERN RAILWAY</marquee></font></b>
+</body></center>
+ 
+

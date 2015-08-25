@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lowyer_code: MyString
+  service_code: MyString
+  service_name: MyString
+  charges: 1.5
+  lowyerdetail_id: 1
+
+two:
+  lowyer_code: MyString
+  service_code: MyString
+  service_name: MyString
+  charges: 1.5
+  lowyerdetail_id: 1

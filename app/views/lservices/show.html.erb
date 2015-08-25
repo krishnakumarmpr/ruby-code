@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>LayorName</b>
+  <%= @lservice.lreport.layorname if  @lservice.lreport_id %>
+</p>
+
+<p>
+  <b>Servicecode:</b>
+  <%= @lservice.servicecode %>
+</p>
+
+<p>
+  <b>EXP</b>
+  <%= @lservice.lreport.exp if  @lservice.lreport_id %>
+</p>
+<p>
+  <b>Rate</b>
+  <%= @lservice.lreport.rate if  @lservice.lreport_id %>
+</p>
+
+
+<p>
+  <b>Charge:</b>
+  <%= @lservice.charge %>
+</p>
+
+
+<%= link_to 'Edit', edit_lservice_path(@lservice) %> |
+<%= link_to 'Back', lservices_path %>

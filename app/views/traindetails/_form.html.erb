@@ -1,0 +1,26 @@
+<%= form_for traindetails url:traindetails_path do |f| %> 
+  <% if @traindetails.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@traindetails.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @traindetails.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+    <%= f.label :number %>
+    <%= select 'train','number',[['select'],[11201],[11202],[11203],[11204],[11205],[11206],[11207],[11208],[11209],[11210],[11211],[11212],[11213],[11214],[11215],[22523],[44525],[56897],[12457],[52698],[24571],[20145]]%>
+     </div>
+<div class="field">
+    <%= f.label :tname %>
+    <%= select 'train','name',[["YercaudExpress"],["BangaloreNagarcoilExpress"],["BrindavanExpress"],["cheranExpress"],["MysorebangaloreExp"],["Malaikottaiexp"],["CoimbatoreNagarcoilExp"],["ChennaiEgmoreExp"],["TataAlaphi"],["VeegalandExp"],["AlapuzhaExp"],["KanniyakumariEgmoreexp"],["Maduraikottayam"],["Guruvayurexp"],["PalagattExp"],["MeenakshiExp"],["Kaversuperpast"],["Trivendramsuperfast"],["MangaloreExp"],["sataptiExp"],["TirupatikanniyakumariExp"],["MumbaiCst"],["NellaiExp"]]%>
+     </div>
+       <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+

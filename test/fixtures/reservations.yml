@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pname: MyString
+  paddress: MyString
+  age: 1
+  gender: MyString
+  doj: 2014-11-15
+  sourse: MyString
+  destination: MyString
+  tname: MyString
+  class: MyString
+  availseats: 1
+  nooFpass: 1
+
+two:
+  pname: MyString
+  paddress: MyString
+  age: 1
+  gender: MyString
+  doj: 2014-11-15
+  sourse: MyString
+  destination: MyString
+  tname: MyString
+  class: MyString
+  availseats: 1
+  nooFpass: 1

@@ -1,0 +1,31 @@
+<h1>Listing lreports</h1>
+
+<table>
+  <tr>
+    <th>Layorcode</th>
+    <th>Layorname</th>
+    <th>City</th>
+    <th>Exp</th>
+    <th>Rate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lreports.each do |lreport| %>
+  <tr>
+    <td><%= lreport.layorcode %></td>
+    <td><%= lreport.layorname %></td>
+    <td><%= lreport.city %></td>
+    <td><%= lreport.exp %></td>
+    <td><%= lreport.rate %></td>
+    <td><%= link_to 'Show', lreport %></td>
+    <td><%= link_to 'Edit', edit_lreport_path(lreport) %></td>
+    <td><%= link_to 'Destroy', lreport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lreport', new_lreport_path %>

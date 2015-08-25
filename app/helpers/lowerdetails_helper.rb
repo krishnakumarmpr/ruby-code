@@ -1,0 +1,2 @@
+module LowerdetailsHelper
+end

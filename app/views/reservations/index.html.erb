@@ -1,0 +1,55 @@
+
+<style>
+h1 {color:red;}
+body {
+    background-color: black;
+}
+</style>
+<body>
+<h1><center><b>SOUTHERN RAILWAY TRANSPORT CORPORATION</b></center> </h1>
+<table>
+  <tr>
+    <th>PassengerName</th>
+    <th>Address</th><br>
+    <th>Age</th><br>
+    <th>Gender</th><br>
+    <th>DateOfJourney</th><br>
+    <th>source</th><br>
+    <th>Destination</th><br>
+    <th>TrainName</th><br>
+     <th>Availableseats</th><br>
+     <th>NoOfPassenger</th><br>
+     <th>Status</th>  
+  </tr>
+
+<% @reservation.each do |reservation| %>
+  <tr>
+    <td><%= reservation.pname %></td>
+    <td><%= reservation.paddress %></td>
+    <td><%= reservation.age %></td>
+    <td><%= reservation.gender if reservation.gender_id %>
+    <td><%= reservation.doj %></td>
+    <td><%= reservation.source if reservation.source_id %></td>
+    <td><%= reservation.destination if reservation.destination_id %></td>
+    <td><%= reservation.tname if reservation.tname_id %></td>
+    <td><%= reservation.availseats %></td>
+    <td><%= reservation.noofpass %></td>
+    <td><%= reservation.status if reservation.status_id %></td>
+    <td><%= link_to 'Shows', reservation %></td>
+    <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+    <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<b><center>
+<h2><%= link_to 'REGISTRATION CLICK HERE',  new_reservation_path %></h2></center></b>
+</body>

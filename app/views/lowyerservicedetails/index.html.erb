@@ -1,0 +1,31 @@
+<h1>Listing lowyerservicedetails</h1>
+
+<table>
+  <tr>
+    <th>Lowyer code</th>
+    <th>Service code</th>
+    <th>Service name</th>
+    <th>Charges</th>
+    <th>Lowyerdetail</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lowyerservicedetails.each do |lowyerservicedetail| %>
+  <tr>
+    <td><%= lowyerservicedetail.lowyer_code %></td>
+    <td><%= lowyerservicedetail.service_code %></td>
+    <td><%= lowyerservicedetail.service_name %></td>
+    <td><%= lowyerservicedetail.charges %></td>
+    <td><%= lowyerservicedetail.lowyerdetail_id %></td>
+    <td><%= link_to 'Show', lowyerservicedetail %></td>
+    <td><%= link_to 'Edit', edit_lowyerservicedetail_path(lowyerservicedetail) %></td>
+    <td><%= link_to 'Destroy', lowyerservicedetail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lowyerservicedetail', new_lowyerservicedetail_path %>
